@@ -6,9 +6,11 @@ def rk2(x,y,h,xfinal):
     A=np.arange(x,xfinal,h)
     for i in A:
         k1=h*(np.exp((x+i)*y))
-        k2=h*(np.exp((x+i + 0.5*h)(y+ 0.5(k1 +h))))
+        k2=h*(np.exp((x+i + 0.5*h)*(y+ 0.5*(k1 +h))))
         y=y+k2
     return y
+b=rk2(0,1,0.01,0.2)
+print(b)
 #2. cramer
 
 import numpy as np
